@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header">Nível</div>
+    <div class="card-body text-dark">
+        {% for level in site.levels %}
+        <div id="#level{{ level.key }}"></div>
+        <li class="tag-head"> 
+            <a href="/levels/{{ level.key }}">{{ level.key }} - {{ level.name }}</a> 
+        </li>
+        <a name="level{{ level.key }}"></a>
+        {% endfor %}        
+    </div>
+</div>

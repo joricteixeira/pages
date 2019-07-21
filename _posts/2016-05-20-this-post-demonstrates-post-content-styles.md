@@ -1,13 +1,11 @@
 ---
 layout: post
 title: "This post demonstrates post content styles"
-author: "John Doe"
+author: soeirosantos
 date: '2017-11-19 14:35:23 +0530'
-category: 
-      - personal
-      - work
-summary: My First Post
+excerpt: My First Post
 thumbnail: posts/hello.jpg
+level: 100
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.

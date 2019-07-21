@@ -1,2 +1,2 @@
 source "https://rubygems.org"
-gem "devlopr"
+gem "jekyll"

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% assign author = site.authors | where: 'username', page.author | first %}
+{% assign level = site.levels | where: 'key', page.level | first %}
+
+<div class="col-lg-12">	
+	<div class="row">
+		<div class="col-lg-8">
+			<article class="card" itemscope itemtype="http://schema.org/BlogPosting">
+				<div class="card-header">
+					<h2 class="post-meta">{{ page.title }}</h2>
+					<p class="post-summary">Publicado por : <img src="/assets/img/author/{{ author.profilephoto }}" class="author-profile-img"> <span itemprop="author" itemscope itemtype="http://schema.org/Person"> <span itemprop="name">{{ author.name }}</span> </span> at
+						<time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date }}</time>
+					</p>
+					<div class="post-categories"> Nível : <a href="/levels/{{ page.level }}">{{ level.key }} - {{ level.name}}</a> </div>
+				</div>
+				<div class="card-body" itemprop="articleBody"> 
+                    <img class="card-img-top" src="/assets/img/{{ page.thumbnail }}" alt="">
+
+                    {{ content }}
+                    
+                </div>				
+			</article>
+		</div>
+		<div class="col-lg-4">			
+			{% include level_card.html %}
+		</div>
+	</div>
+	<!-- End of row-->
+</div>
